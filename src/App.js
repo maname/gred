@@ -14,7 +14,11 @@ function App() {
       newButtons[index] = true;
       const count = newButtons.filter(x => x === true).length
       if(count === BUTTONS ) {
-        setButton([false,false,false,false,false,false]);
+        let arr = [];
+        for(let i=1; i<=BUTTONS; i++) {
+          arr.push(false);
+        }
+        setButton(arr);
       } else{
         setButton(newButtons);
       }
